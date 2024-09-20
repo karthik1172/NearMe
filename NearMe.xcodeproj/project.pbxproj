@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB6572E02C9D5158007FD9AB /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6572DF2C9D5135007FD9AB /* MKCoordinateRegion.swift */; };
+		BB6572E22C9D515F007FD9AB /* buffer.txt in Resources */ = {isa = PBXBuildFile; fileRef = BB6572E12C9D515F007FD9AB /* buffer.txt */; };
 		BB7CE35D2C9B15B100D38F2F /* NearMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CE35C2C9B15B100D38F2F /* NearMeApp.swift */; };
 		BB7CE35F2C9B15B100D38F2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CE35E2C9B15B100D38F2F /* ContentView.swift */; };
 		BB7CE3612C9B15B200D38F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7CE3602C9B15B200D38F2F /* Assets.xcassets */; };
 		BB7CE3642C9B15B200D38F2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7CE3632C9B15B200D38F2F /* Preview Assets.xcassets */; };
+		BB7CE36C2C9B3E1500D38F2F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CE36B2C9B3E1500D38F2F /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB6572DF2C9D5135007FD9AB /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
+		BB6572E12C9D515F007FD9AB /* buffer.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = buffer.txt; sourceTree = "<group>"; };
 		BB7CE3592C9B15B100D38F2F /* NearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7CE35C2C9B15B100D38F2F /* NearMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeApp.swift; sourceTree = "<group>"; };
 		BB7CE35E2C9B15B100D38F2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB7CE3602C9B15B200D38F2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7CE3632C9B15B200D38F2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB7CE36B2C9B3E1500D38F2F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB6572DE2C9D5122007FD9AB /* Extenshion */ = {
+			isa = PBXGroup;
+			children = (
+				BB6572DF2C9D5135007FD9AB /* MKCoordinateRegion.swift */,
+			);
+			path = Extenshion;
+			sourceTree = "<group>";
+		};
 		BB7CE3502C9B15B100D38F2F = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +65,9 @@
 		BB7CE35B2C9B15B100D38F2F /* NearMe */ = {
 			isa = PBXGroup;
 			children = (
+				BB6572E12C9D515F007FD9AB /* buffer.txt */,
+				BB6572DE2C9D5122007FD9AB /* Extenshion */,
+				BB7CE36A2C9B3DFF00D38F2F /* Managers */,
 				BB7CE35C2C9B15B100D38F2F /* NearMeApp.swift */,
 				BB7CE35E2C9B15B100D38F2F /* ContentView.swift */,
 				BB7CE3602C9B15B200D38F2F /* Assets.xcassets */,
@@ -65,6 +82,14 @@
 				BB7CE3632C9B15B200D38F2F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB7CE36A2C9B3DFF00D38F2F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BB7CE36B2C9B3E1500D38F2F /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +152,7 @@
 			files = (
 				BB7CE3642C9B15B200D38F2F /* Preview Assets.xcassets in Resources */,
 				BB7CE3612C9B15B200D38F2F /* Assets.xcassets in Resources */,
+				BB6572E22C9D515F007FD9AB /* buffer.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +165,8 @@
 			files = (
 				BB7CE35F2C9B15B100D38F2F /* ContentView.swift in Sources */,
 				BB7CE35D2C9B15B100D38F2F /* NearMeApp.swift in Sources */,
+				BB7CE36C2C9B3E1500D38F2F /* LocationManager.swift in Sources */,
+				BB6572E02C9D5158007FD9AB /* MKCoordinateRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +303,7 @@
 				DEVELOPMENT_TEAM = 57U4VWL7LG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "NearMe app requires  your location to work.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +333,7 @@
 				DEVELOPMENT_TEAM = 57U4VWL7LG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "NearMe app requires  your location to work.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

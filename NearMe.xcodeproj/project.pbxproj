@@ -14,6 +14,8 @@
 		BB7CE3612C9B15B200D38F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7CE3602C9B15B200D38F2F /* Assets.xcassets */; };
 		BB7CE3642C9B15B200D38F2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7CE3632C9B15B200D38F2F /* Preview Assets.xcassets */; };
 		BB7CE36C2C9B3E1500D38F2F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CE36B2C9B3E1500D38F2F /* LocationManager.swift */; };
+		BBEA41D02CA08B1A00E07ADE /* MapUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEA41CF2CA08B1A00E07ADE /* MapUtilities.swift */; };
+		BBEA41D32CA09A5900E07ADE /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEA41D22CA09A5900E07ADE /* PlaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		BB7CE3602C9B15B200D38F2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7CE3632C9B15B200D38F2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB7CE36B2C9B3E1500D38F2F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BBEA41CF2CA08B1A00E07ADE /* MapUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilities.swift; sourceTree = "<group>"; };
+		BBEA41D22CA09A5900E07ADE /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 		BB7CE35B2C9B15B100D38F2F /* NearMe */ = {
 			isa = PBXGroup;
 			children = (
+				BBEA41D12CA09A3F00E07ADE /* Views */,
+				BBEA41CE2CA08ACC00E07ADE /* Utils */,
 				BB6572E12C9D515F007FD9AB /* buffer.txt */,
 				BB6572DE2C9D5122007FD9AB /* Extenshion */,
 				BB7CE36A2C9B3DFF00D38F2F /* Managers */,
@@ -90,6 +96,22 @@
 				BB7CE36B2C9B3E1500D38F2F /* LocationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		BBEA41CE2CA08ACC00E07ADE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA41CF2CA08B1A00E07ADE /* MapUtilities.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BBEA41D12CA09A3F00E07ADE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA41D22CA09A5900E07ADE /* PlaceView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEA41D32CA09A5900E07ADE /* PlaceView.swift in Sources */,
 				BB7CE35F2C9B15B100D38F2F /* ContentView.swift in Sources */,
 				BB7CE35D2C9B15B100D38F2F /* NearMeApp.swift in Sources */,
 				BB7CE36C2C9B3E1500D38F2F /* LocationManager.swift in Sources */,
+				BBEA41D02CA08B1A00E07ADE /* MapUtilities.swift in Sources */,
 				BB6572E02C9D5158007FD9AB /* MKCoordinateRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

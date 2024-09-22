@@ -48,7 +48,7 @@ extension LocationManager {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locations.last.map {
             region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
-                                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                                        span: MKCoordinateSpan(latitudeDelta: 6.05, longitudeDelta: 6.05))
         }
     }
     
@@ -56,12 +56,16 @@ extension LocationManager {
         switch manager.authorizationStatus {
         case .notDetermined:
             manager.requestWhenInUseAuthorization()
+            
         case .authorizedAlways, .authorizedWhenInUse:
             manager.requestLocation()
+            
         case .denied:
             error = .authorizationDenied
+            
         case .restricted:
             error = .authorizationRestricted
+            
         @unknown default:
             break
         }
@@ -70,15 +74,21 @@ extension LocationManager {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
         if let clError = error as? CLError {
+            
             switch clError.code {
+                
             case .locationUnknown:
                 self.error = .unknownLocation
+                
             case .denied:
                 self.error = .accessDenied
+                
             case .network:
                 self.error = .network
+                
             default:
                 self.error = .operationFailed
+                
             }
         }
         

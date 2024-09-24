@@ -8,6 +8,11 @@
 import SwiftUI
 import MapKit
 
+enum DisplayMode {
+    case list
+    case detail
+}
+
 struct ContentView: View {
     
     @State private var query: String = "cofee"
@@ -17,6 +22,8 @@ struct ContentView: View {
     @State private var isSearching: Bool = false
     @State private var mapItems:[MKMapItem] = []
     @State private var visibleRegion: MKCoordinateRegion?
+    @State private var selectedMapItem: MKMapItem?
+    @State private var displayMode: DisplayMode = .list
     
     func search() async {
         do {
@@ -32,8 +39,9 @@ struct ContentView: View {
     }
     
     var body: some View {
+        
         ZStack {
-            Map(position: $position) {
+            Map(position: $position, selection: $selectedMapItem) {
                 ForEach(mapItems, id: \.self) { mapItem in
                     Marker(item: mapItem)
                 }
@@ -48,11 +56,19 @@ struct ContentView: View {
             
             .sheet(isPresented: .constant(true), content: {
                 VStack {
-                    SearchBarView(search: $query, isSearching: $isSearching)
                     
-                    PlaceListView(mapItems: mapItems)
+                    switch displayMode {
+                    case .list:
+                        SearchBarView(search: $query, isSearching: $isSearching)
+                        
+                        PlaceListView(mapItems: mapItems)
+                    case .detail:
+                        SelectedPlaceDetailView(mapItem: $selectedMapItem)
+                    }
                     
-                    Spacer()
+                    
+                    
+                    
                 }
                 .presentationDetents([.fraction(0.15), .medium, .large], selection: $selectedDetent)
                 .presentationDragIndicator(.visible)
@@ -60,6 +76,14 @@ struct ContentView: View {
                 .presentationBackgroundInteraction(.enabled(upThrough: .medium))
             })
         }
+        .onChange(of: selectedMapItem, {
+            if selectedMapItem != nil {
+                displayMode = .detail
+            }
+            else{
+                displayMode = .list
+            }
+        })
         .onMapCameraChange { context in
             visibleRegion = context.region
         }

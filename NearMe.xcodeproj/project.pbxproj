@@ -10,6 +10,8 @@
 		BB38982E2CA293E900FD6394 /* SearchOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38982D2CA293E900FD6394 /* SearchOptionView.swift */; };
 		BB3898302CA2940600FD6394 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38982F2CA2940600FD6394 /* SearchBarView.swift */; };
 		BB3898322CA2941E00FD6394 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3898312CA2941E00FD6394 /* PlaceListView.swift */; };
+		BB3898342CA29CED00FD6394 /* MeasurementFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3898332CA29CED00FD6394 /* MeasurementFormatter.swift */; };
+		BB3898362CA3278600FD6394 /* SelectedPlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3898352CA3278600FD6394 /* SelectedPlaceDetailView.swift */; };
 		BB6572E02C9D5158007FD9AB /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6572DF2C9D5135007FD9AB /* MKCoordinateRegion.swift */; };
 		BB6572E22C9D515F007FD9AB /* buffer.txt in Resources */ = {isa = PBXBuildFile; fileRef = BB6572E12C9D515F007FD9AB /* buffer.txt */; };
 		BB7CE35D2C9B15B100D38F2F /* NearMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CE35C2C9B15B100D38F2F /* NearMeApp.swift */; };
@@ -26,6 +28,8 @@
 		BB38982D2CA293E900FD6394 /* SearchOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOptionView.swift; sourceTree = "<group>"; };
 		BB38982F2CA2940600FD6394 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		BB3898312CA2941E00FD6394 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		BB3898332CA29CED00FD6394 /* MeasurementFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatter.swift; sourceTree = "<group>"; };
+		BB3898352CA3278600FD6394 /* SelectedPlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPlaceDetailView.swift; sourceTree = "<group>"; };
 		BB6572DF2C9D5135007FD9AB /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 		BB6572E12C9D515F007FD9AB /* buffer.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = buffer.txt; sourceTree = "<group>"; };
 		BB7CE3592C9B15B100D38F2F /* NearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6572DF2C9D5135007FD9AB /* MKCoordinateRegion.swift */,
+				BB3898332CA29CED00FD6394 /* MeasurementFormatter.swift */,
 			);
 			path = Extenshion;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				BB38982D2CA293E900FD6394 /* SearchOptionView.swift */,
 				BB38982F2CA2940600FD6394 /* SearchBarView.swift */,
 				BB3898312CA2941E00FD6394 /* PlaceListView.swift */,
+				BB3898352CA3278600FD6394 /* SelectedPlaceDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,7 +207,9 @@
 				BB3898302CA2940600FD6394 /* SearchBarView.swift in Sources */,
 				BB3898322CA2941E00FD6394 /* PlaceListView.swift in Sources */,
 				BB7CE35F2C9B15B100D38F2F /* ContentView.swift in Sources */,
+				BB3898362CA3278600FD6394 /* SelectedPlaceDetailView.swift in Sources */,
 				BB7CE35D2C9B15B100D38F2F /* NearMeApp.swift in Sources */,
+				BB3898342CA29CED00FD6394 /* MeasurementFormatter.swift in Sources */,
 				BB38982E2CA293E900FD6394 /* SearchOptionView.swift in Sources */,
 				BB7CE36C2C9B3E1500D38F2F /* LocationManager.swift in Sources */,
 				BBEA41D52CA0A57C00E07ADE /* PreviewData.swift in Sources */,

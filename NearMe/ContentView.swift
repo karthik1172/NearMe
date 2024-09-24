@@ -21,11 +21,13 @@ struct ContentView: View {
     func search() async {
         do {
             mapItems = try await performSearch(searchTerm: query, visibleRegion: visibleRegion)
-            print(mapItems)
+            //print(mapItems)
             isSearching = false
         }
         catch {
-            print(error)
+            mapItems = []
+            print(error.localizedDescription)
+            isSearching = false
         }
     }
     
@@ -46,15 +48,10 @@ struct ContentView: View {
             
             .sheet(isPresented: .constant(true), content: {
                 VStack {
-                    TextField("Search", text: $query)
-                        .textFieldStyle(.roundedBorder)
-                        .padding()
-                        .onSubmit {
-                            isSearching = true
-                        }
-                    List(mapItems, id: \.self) { mapItem in
-                        PlaceView(mapItem: mapItem)
-                    }
+                    SearchBarView(search: $query, isSearching: $isSearching)
+                    
+                    PlaceListView(mapItems: mapItems)
+                    
                     Spacer()
                 }
                 .presentationDetents([.fraction(0.15), .medium, .large], selection: $selectedDetent)
@@ -66,9 +63,11 @@ struct ContentView: View {
         .onMapCameraChange { context in
             visibleRegion = context.region
         }
-        .task(id: isSearching) {
-            await search()
-        }
+        .task(id: isSearching, {
+            if isSearching {
+                await search()
+            }
+        })
     }
 }
 

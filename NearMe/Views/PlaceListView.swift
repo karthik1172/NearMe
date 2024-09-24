@@ -6,13 +6,19 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PlaceListView: View {
+    let mapItems: [MKMapItem]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(mapItems, id: \.self) { mapItem in
+            PlaceView(mapItem: mapItem)
+        }
     }
 }
 
 #Preview {
-    PlaceListView()
+    PlaceListView(mapItems: [PreviewData.apple])
 }
+

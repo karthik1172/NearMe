@@ -21,12 +21,12 @@ struct PlaceView: View {
                 .font(.title3)
             
             Text(address)
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding()
     }
 }
 
-//#Preview {
-//    PlaceView()
-//}
+#Preview {
+    PlaceView(mapItem: PreviewData.apple)
+}

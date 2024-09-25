@@ -8,6 +8,17 @@
 import Foundation
 import MapKit
 
+func calculateDirection(from: MKMapItem, to: MKMapItem) async -> MKRoute? {
+    let directionsRequest = MKDirections.Request()
+    directionsRequest.source = from
+    directionsRequest.destination = to
+    
+    let directions = MKDirections(request: directionsRequest)
+    let response = try? await directions.calculate()
+    
+    return response?.routes.first
+}
+
 func calculateDistance(from: CLLocation, to: CLLocation) -> Measurement<UnitLength> {
     let distanceInMeters = from.distance(from: to)
     return Measurement(value: distanceInMeters, unit: .meters)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1716FE2CA40D7B0017102F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1716FD2CA40D7B0017102F /* ActionButton.swift */; };
 		BB38982E2CA293E900FD6394 /* SearchOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38982D2CA293E900FD6394 /* SearchOptionView.swift */; };
 		BB3898302CA2940600FD6394 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38982F2CA2940600FD6394 /* SearchBarView.swift */; };
 		BB3898322CA2941E00FD6394 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3898312CA2941E00FD6394 /* PlaceListView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB1716FD2CA40D7B0017102F /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		BB38982D2CA293E900FD6394 /* SearchOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOptionView.swift; sourceTree = "<group>"; };
 		BB38982F2CA2940600FD6394 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		BB3898312CA2941E00FD6394 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				BB38982F2CA2940600FD6394 /* SearchBarView.swift */,
 				BB3898312CA2941E00FD6394 /* PlaceListView.swift */,
 				BB3898352CA3278600FD6394 /* SelectedPlaceDetailView.swift */,
+				BB1716FD2CA40D7B0017102F /* ActionButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB1716FE2CA40D7B0017102F /* ActionButton.swift in Sources */,
 				BBEA41D32CA09A5900E07ADE /* PlaceView.swift in Sources */,
 				BB3898302CA2940600FD6394 /* SearchBarView.swift in Sources */,
 				BB3898322CA2941E00FD6394 /* PlaceListView.swift in Sources */,

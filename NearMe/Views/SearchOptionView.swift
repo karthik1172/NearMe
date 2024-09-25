@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchOptionView: View {
-    let searchOptions = ["Restaurants":"fork.knife", "Coffee":"cup.and.saucer.fill", "Hospital":"cross.case.fill", "Grocery":"cart.fill", "Movies":"film", "Books":"book", "Sports":"figure.australian.football", "Shopping":"bag.fill", "Gym": "dumbbell.fill"]
+    let searchOptions = ["Restaurants":"fork.knife", "Coffee":"cup.and.saucer.fill", "Hospital":"cross.case.fill", "Grocery":"cart.fill", "Movies":"film", "Books":"book", "Sports":"figure.australian.football", "Shopping":"bag.fill", "Gym": "dumbbell.fill", "Restroom": "toilet.fill"]
     
     let onSelected: (String) -> Void
     

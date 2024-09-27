@@ -33,12 +33,13 @@ NearMe is an iOS application that allows users to search for places of interest 
 •	Async/Await: For handling asynchronous tasks such as location fetching and search functionality.
 •	Custom Error Handling: Used Swift’s LocalizedError for user-friendly error messages.
 
-
 Usage
 
 •	Search: Enter the type of place you’re looking for (e.g., Coffee, Restaurant, etc.) in the search bar.
 
+
 •	View Details: Tap on a place to view more information, and access the action button for calling or getting directions.
+
 
 •	Routing: Select a place, and the app will provide a route from your current location to the destination.
 
